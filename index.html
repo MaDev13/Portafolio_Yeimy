@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeimy Vargas | Portafolio Contable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#0A1128',          /* Azul Marino */
+                        'secondary-light': '#F2F2F2',       /* Gris Claro - Ya no se usa directamente para fondos de sección */
+                        'accent-gold': '#C2B280',           /* Dorado Suave */
+                        'text-dark-custom': '#333333',      /* Gris Oscuro para texto sobre fondos claros (menos usado ahora) */
+                        'text-light-custom': '#FFFFFF',     /* Blanco para texto sobre fondos oscuros */
+                        'text-medium-light-custom': '#E0E0E0', /* Gris muy claro para mejor contraste en fondos oscuros */
+                        'footer-text': '#A3A3A3',           /* Un gris para el texto del footer sobre el fondo oscuro */
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'], // Configura Roboto como la fuente principal
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-slide-in-left {
+            animation: slideInLeft 1s ease-out forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 1s ease-out forwards;
+        }
+
+        /* Estilo para las tarjetas de servicios (fondo semi-transparente) */
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.05); /* Blanco con 5% de opacidad */
+            backdrop-filter: blur(8px); /* Efecto de desenfoque */
+            border-color: #C2B280; /* Borde dorado */
+        }
+        .service-card:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Ligeramente más opaco al pasar el mouse */
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gradient-to-br from-primary-dark via-[#1A2E59] to-primary-dark text-text-light-custom font-sans">
+    <div class="fixed top-4 left-6 z-50">
+        <h1 class="text-3xl font-bold text-text-light-custom">Yeimy Vargas</h1>
+        <div class="w-22 h-1 bg-accent-gold mt-1 rounded-full shadow-[0_0_20px_#C2B280]"></div>
+    </div>
+
+    <header class="flex items-center justify-center min-h-screen">
+        <div class="text-center bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl p-10 max-w-2xl animate-fade-in">
+
+            <h1 class="text-5xl font-bold text-text-light-custom mb-2">Yeimy Paola Vargas López</h1>
+            <p class="text-accent-gold text-xl font-medium mb-4 tracking-wide">Contadora Pública | Asesora Financiera
+            <p class="text-text-medium-light-custom text-base md:text-lg mb-6">
+                Tu socia estratégica en el mundo financiero, lista para optimizar tus procesos contables y fiscales.
+            </p>
+
+            <a href="#sobremi"
+                class="inline-block bg-accent-gold hover:bg-primary-dark hover:text-accent-gold text-text-light-custom font-semibold py-2 px-6 rounded-xl transition hover:scale-105">
+                Conóceme más
+            </a>
+
+        </div>
+    </header>
+
+    <section id="sobremi" class="py-20 px-4 md:px-10 text-text-light-custom">
+        <div class="max-w-5xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
+
+            <div class="text-center md:text-left space-y-6 animate-slide-in-left">
+                <p class="text-lg">Hola, soy</p>
+                <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-text-light-custom">Yeimy Vargas
+                </h1>
+                 <p class="text-base sm:text-lg max-w-md mx-auto md:mx-0 text-text-medium-light-custom">
+                    Contadora Pública con una visión fresca y dinámica, lista para asumir los desafíos financieros
+                    y contables de hoy. Me apasiona ayudar a empresas y profesionales a alcanzar sus metas económicas,
+                    aportando siempre una actitud proactiva y un espíritu de crecimiento constante.
+                </p>
+                <p class="text-base md:text-lg max-w-lg mx-auto md:mx-0 text-text-medium-light-custom">
+                    Cuento con una amplia trayectoria en la elaboración de estados financieros precisos y la
+                    presentación eficiente de impuestos. Soy experta en la planificación y seguimiento de
+                    presupuestos, así como en la gestión integral de procesos contables en áreas clave como
+                    tesorería, costos, inventarios, facturación y cartera. También tengo experiencia en negociaciones
+                    financieras y en la elaboración de informes claros y información exógena, garantizando
+                    siempre la transparencia y el cumplimiento. Mi compromiso con el manejo inteligente de
+                    la información y el trabajo colaborativo son la clave para impulsar el éxito sostenido de tu
+                    negocio aquí en Barranquilla y más allá.
+                </p>
+
+                <div class="flex flex-col sm:flex-row sm:justify-start items-center gap-4">
+                    <a href="./HVContadorPúblicoYeimyVargas.pdf" download
+                        class="w-full sm:w-auto text-center bg-accent-gold hover:bg-primary-dark hover:text-accent-gold text-text-light-custom font-semibold py-2 px-6 rounded-xl transition hover:scale-105">
+                        Descargar C.V.
+                    </a>
+                    <a href="#servicios"
+                        class="w-full sm:w-auto text-center border border-accent-gold hover:bg-accent-gold text-accent-gold hover:text-text-light-custom font-semibold py-2 px-6 rounded-xl transition hover:scale-105">
+                        Ver servicios
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center md:justify-end animate-slide-in-right">
+                <div
+                    class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-accent-gold shadow-[0_0_30px_#C2B28099]">
+                    <img src="/foto_yeimy.jpg" alt="Foto de Yeimy Vargas"
+                        class="object-cover w-full h-full" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experiencia" class="py-20 px-4 md:px-10">
+    <div class="max-w-6xl mx-auto">
+
+        <h2 class="text-4xl font-bold text-center mb-6 text-text-light-custom">Experiencia Profesional</h2>
+
+        <div class="flex justify-center mb-12 animate-fade-in">
+            <div
+                class="rounded-full bg-accent-gold text-primary-dark font-bold px-6 py-2 text-lg shadow-lg hover:scale-105 transition">
+                <span>+10</span> años de experiencia
+            </div>
+        </div>
+
+        <div class="space-y-10">
+
+            <div class="md:flex md:items-start md:gap-6 animate-slide-in-left">
+                <div class="md:w-1/3 mb-2 md:mb-0">
+                    <h3 class="text-xl font-semibold text-accent-gold">INGETEC AMBIENTAL SAS</h3>
+                    <p class="text-sm text-text-medium-light-custom">Contador Público</p>
+                    <p class="text-xs text-gray-400 mt-1">Enero 15 de 2024 — Julio 5 de 2025</p>
+                    <p class="text-xs text-gray-400">Barranquilla</p>
+                </div>
+                <div class="md:w-2/3 text-text-medium-light-custom">
+                    <p>
+                        Como Contador Público en INGETEC AMBIENTAL SAS, fui responsable integral del proceso contable y financiero. Mis funciones principales incluyeron la elaboración y presentación de estados financieros, la presentación de impuestos e informes anuales, la gestión de presupuesto y tesorería, el manejo de cartera de proveedor y cliente, y los procesos de nómina y flujo de caja.
+                    </p>
+                </div>
+            </div>
+
+            <div class="md:flex md:items-start md:gap-6 animate-slide-in-right">
+                <div class="md:w-1/3 mb-2 md:mb-0">
+                    <h3 class="text-xl font-semibold text-accent-gold">INDUTRONICA DEL CARIBE SAS</h3>
+                    <p class="text-sm text-text-medium-light-custom">Analista Contable</p>
+                    <p class="text-xs text-gray-400 mt-1">Noviembre 10 de 2019 — Noviembre 23 de 2023</p>
+                    <p class="text-xs text-gray-400">Barranquilla</p>
+                </div>
+                <div class="md:w-2/3 text-text-medium-light-custom">
+                    <p>
+                        En INDUTRONICA DEL CARIBE SAS, me desempeñé como Analista Contable, gestionando de manera completa la estructura contable de la compañía. Mi rol abarcó la elaboración y presentación de impuestos, el análisis y creación de balances, la gestión de cuentas por cobrar, la elaboración y presentación de informes de costos e ingresos, y el apoyo crucial en la gestión de cartera y la presentación de informes anuales.
+                    </p>
+                </div>
+            </div>
+
+            <div class="md:flex md:items-start md:gap-6 animate-slide-in-left">
+                <div class="md:w-1/3 mb-2 md:mb-0">
+                    <h3 class="text-xl font-semibold text-accent-gold">FERBA DECORACIONES</h3>
+                    <p class="text-sm text-text-medium-light-custom">Auxiliar Contable y Asistente Administrativa
+                    </p>
+                    <p class="text-xs text-gray-400 mt-1">Noviembre 19 de 2012 — Mayo 31 de 2017</p>
+                    <p class="text-xs text-gray-400">(Incluye periodo de prácticas)</p>
+                    <p class="text-xs text-gray-400">Barranquilla</p>
+                </div>
+                <div class="md:w-2/3 text-text-medium-light-custom">
+                    <p>
+                        En FERBA DECORACIONES, trabajé como Auxiliar Contable y Asistente Administrativa. Estuve a cargo del análisis financiero, la gestión de cartera y el cuadre de caja, además de la contabilización de gastos y egresos, y la gestión de cuentas por cobrar y por pagar.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+    <section id="servicios" class="py-20 px-4 md:px-10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-text-light-custom">Servicios que ofrezco</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="service-card border rounded-2xl p-6 shadow-lg hover:shadow-xl transition hover:scale-105 animate-fade-in">
+                    <h3 class="text-xl font-semibold text-accent-gold mb-2">📊 Contabilidad General</h3>
+                    <p class="text-sm text-text-medium-light-custom">
+                        Manejo completo de registros contables, preparación de estados financieros y análisis de la
+                        salud económica de tu negocio.
+                    </p>
+                </div>
+
+                <div
+                    class="service-card border rounded-2xl p-6 shadow-lg hover:shadow-xl transition hover:scale-105 animate-fade-in">
+                    <h3 class="text-xl font-semibold text-accent-gold mb-2">💰 Asesoría Fiscal y Tributaria</h3>
+                    <p class="text-sm text-text-medium-light-custom">
+                        Optimización de impuestos, preparación y presentación de declaraciones fiscales, y planeación
+                        tributaria para maximizar tus beneficios.
+                    </p>
+                </div>
+
+                <div
+                    class="service-card border rounded-2xl p-6 shadow-lg hover:shadow-xl transition hover:scale-105 animate-fade-in">
+                    <h3 class="text-xl font-semibold text-accent-gold mb-2">📈 Auditoría y Revisión Financiera</h3>
+                    <p class="text-sm text-text-medium-light-custom">
+                        Evaluación de la información financiera, identificación de riesgos y recomendaciones para
+                        mejorar los controles internos y la transparencia.
+                    </p>
+                </div>
+
+                <div
+                    class="service-card border rounded-2xl p-6 shadow-lg hover:shadow-xl transition hover:scale-105 animate-fade-in">
+                    <h3 class="text-xl font-semibold text-accent-gold mb-2">💼 Nómina y Seguridad Social</h3>
+                    <p class="text-sm text-text-medium-light-custom">
+                        Gestión integral de nómina, liquidación de prestaciones sociales y cumplimiento de obligaciones
+                        con la seguridad social.
+                    </p>
+                </div>
+
+                <div
+                    class="service-card border rounded-2xl p-6 shadow-lg hover:shadow-xl transition hover:scale-105 animate-fade-in">
+                    <h3 class="text-xl font-semibold text-accent-gold mb-2">📊 Consultoría Financiera</h3>
+                    <p class="text-sm text-text-medium-light-custom">
+                        Análisis de costos, presupuestos, proyecciones financieras y desarrollo de estrategias para el
+                        crecimiento sostenible.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer
+        class="relative z-10 backdrop-blur-md bg-white/5 border-accent-gold py-10 px-6 text-text-light-custom text-sm shadow-[0_0_30px_#C2B28033]">
+        <div
+            class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+
+            <div class="max-w-md">
+                <h3 class="text-lg font-semibold mb-2">Yeimy Vargas</h3>
+                <p class="text-footer-text">
+                    Contadora pública comprometida con la excelencia y la transparencia financiera, ofreciendo
+                    soluciones contables y fiscales adaptadas a cada necesidad.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <span
+                    class="text-text-light-custom font-semibold mb-2 tracking-wide border-b border-accent-gold inline-block pb-1">Secciones</span>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 text-footer-text">
+                    <a href="#sobremi" class="hover:text-text-light-custom transition">Sobre mí</a>
+                    <a href="#experiencia" class="hover:text-text-light-custom transition">Experiencia</a>
+                    <a href="#servicios" class="hover:text-text-light-custom transition">Servicios</a>
+                </div>
+            </div>
+
+            <!-- <div class="flex flex-col items-center md:items-start">
+                <span
+                    class="text-text-light-custom font-semibold mb-2 tracking-wide border-b border-accent-gold inline-block pb-1">Sígueme</span>
+                <div class="flex gap-4">
+                    <a href="https://linkedin.com/in/anasofiacontadora" target="_blank" aria-label="LinkedIn"
+                        class="hover:text-accent-gold transition">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zm.02 4.75h-.02C4.07 8.25 3.5 8.82 3.5 9.5V20h3v-7c0-1.65 1.35-3 3-3s3 1.35 3 3v7h3V13c0-3.31-2.69-6-6-6s-6 2.69-6 6v7H1v-7c0-3.58 2.91-6.5 6.5-6.5 1.33 0 2.56.41 3.58 1.11-.46-2.17-2.45-3.61-4.6-3.61z" />
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Email" class="hover:text-accent-gold transition">
+                        <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm0 2.3l-12-9.713v15.413h24v-15.413l-12 9.713z" />
+                        </svg>
+                    </a>
+                   
+                    </a>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="text-center text-gray-400 mt-8 text-xs">
+            © <span id="year"></span> MaDev. Todos los derechos reservados.
+        </div>
+    </footer>
+
+
+    <script>
+        // Inserta el año actual automáticamente
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+
+    <div
+        class="hidden md:flex flex-col gap-4 fixed right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md border border-accent-gold text-text-light-custom rounded-xl p-4 z-50 shadow-lg animate-fade-in">
+        <a href="#sobremi" class="hover:text-accent-gold transition font-semibold text-sm">Sobre mí</a>
+        <a href="#experiencia" class="hover:text-accent-gold transition font-semibold text-sm">Experiencia</a>
+        <a href="#servicios" class="hover:text-accent-gold transition font-semibold text-sm">Servicios</a>
+    </div>
+
+    <div
+        class="fixed bottom-4 right-4 md:hidden flex items-center gap-2 bg-white/10 backdrop-blur-md border border-accent-gold text-text-light-custom rounded-full px-4 py-2 z-50 shadow-lg animate-fade-in text-sm">
+        <a href="#sobremi" class="hover:text-accent-gold transition font-semibold">Sobre mí</a>
+        <span class="text-accent-gold">|</span>
+        <a href="#experiencia" class="hover:text-accent-gold transition font-semibold">Experiencia</a>
+        <span class="text-accent-gold">|</span>
+        <a href="#servicios" class="hover:text-accent-gold transition font-semibold">Servicios</a>
+        <span class="text-accent-gold">|</span>
+
+    </div>
+
+    <button id="btnSubir" onclick="scrollToTop()"
+        class="fixed bottom-16 right-6 z-50 p-3 rounded-full bg-white/10 backdrop-blur-md border border-accent-gold text-text-light-custom hover:bg-accent-gold hover:text-primary-dark transition hidden shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+</body>
+
+
+<script>
+    // Para todos los enlaces con #
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: target.offsetTop - 20, // puedes ajustar el espacio
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    const btnSubir = document.getElementById("btnSubir");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            btnSubir.classList.remove("hidden");
+        } else {
+            btnSubir.classList.add("hidden");
+        }
+    });
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+</html>
